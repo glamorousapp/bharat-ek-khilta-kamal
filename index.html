@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>GLAMOROUS | India's Homegrown Social Platform — Create. Earn. Repeat.</title>
-  <meta name="description" content="GLAMOROUS is India's new social platform where creators get paid for their talent. Trusted by Ravi Kishan and 10,000+ creators. Download now.">
-  <meta name="keywords" content="Indian social media, creator app, earn from content, GLAMOROUS, Ravi Kishan, Made in India app">
+  <title>GLAMOROUS | India's Homegrown Social Media Platform — Create. Earn. Repeat.</title>
+  <meta name="description" content="GLAMOROUS is India's homegrown social media platform where creators get paid for their talent. Trusted by Ravi Kishan and 10,000+ creators. Download now.">
+  <meta name="keywords" content="Indian social media, social media platform, creator app, earn from content, GLAMOROUS, Ravi Kishan, Made in India app, Show Your Talent">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -213,6 +213,12 @@
       text-decoration: none;
     }
 
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .logo-img {
       height: 48px;
       width: auto;
@@ -245,6 +251,27 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem;
+      color: #AAAAAA;
+      letter-spacing: 0.5px;
     }
 
     .nav-links {
@@ -293,6 +320,17 @@
       padding: 8px 24px;
       margin-bottom: 1.5rem;
     }
+
+    .indian-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .flag-saffron { width: 20px; height: 8px; background: #FF9933; border-radius: 2px 2px 0 0; }
+    .flag-white { width: 20px; height: 8px; background: #FFFFFF; }
+    .flag-green { width: 20px; height: 8px; background: #138808; border-radius: 0 0 2px 2px; }
+    .flag-wheel { font-size: 10px; color: #000080; margin-left: 2px; }
 
     .section-title {
       font-size: 2.8rem;
@@ -570,6 +608,40 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
+    /* Floating Logo Section */
+    .floating-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      padding: 8px 15px;
+      border-radius: 50px;
+      border: 1px solid rgba(245,176,66,0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .floating-logo:hover {
+      transform: scale(1.05);
+      border-color: var(--gold);
+    }
+
+    .floating-logo img {
+      height: 32px;
+      width: auto;
+    }
+
+    .floating-logo span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
     .footer {
       border-top: 1px solid rgba(245,176,66,0.2);
       padding: 2rem 5%;
@@ -581,6 +653,19 @@
     .footer a {
       color: var(--gold);
       text-decoration: none;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo img {
+      height: 32px;
+      width: auto;
     }
 
     @media (max-width: 1024px) {
@@ -614,6 +699,17 @@
       .promoter-grid, .video-showcase-grid, .reels-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
+      }
+      .brand-text {
+        display: none;
+      }
+      .floating-logo {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 12px;
+      }
+      .floating-logo span {
+        display: none;
       }
     }
 
@@ -651,23 +747,29 @@
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Navigation with Logo and Brand Text -->
 <nav class="navbar">
   <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
     <a href="index.html" class="logo-container" id="logoHomeLink">
-      <img src="logo.png" alt="GLAMOROUS" class="logo-img" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
-      <div id="logoFallback" class="logo-fallback" style="display: none;">
-        <div class="logo-icon">🇮🇳</div>
-        <div class="logo-text">GLAMOROUS</div>
+      <div class="logo-wrapper">
+        <img src="logo.png" alt="GLAMOROUS" class="logo-img" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
+        <div id="logoFallback" class="logo-fallback" style="display: none;">
+          <div class="logo-icon">🇮🇳</div>
+          <div class="logo-text">GLAMOROUS</div>
+        </div>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">GLAMOROUS</div>
+        <div class="brand-tagline">Show Your Talent</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html#home" class="active">Home</a>
-      <a href="index.html#promoters">Promoters</a>
-      <a href="index.html#features">Features</a>
-      <a href="index.html#reels">Reels</a>
-      <a href="index.html#videos">Media</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#promoters">Promoters</a>
+      <a href="#features">Features</a>
+      <a href="#reels">Reels</a>
+      <a href="#videos">Media</a>
+      <a href="#contact">Contact</a>
       <div style="display: flex; gap: 10px;">
         <a href="https://play.google.com/store/apps/details?id=com.glamorous.alldaysoftech" target="_blank" class="nav-store-btn"><i class="fab fa-google-play"></i><span>Play Store</span></a>
         <a href="https://apps.apple.com/in/app/glamorous-show-your-talent/id6745411065" target="_blank" class="nav-store-btn"><i class="fab fa-apple"></i><span>App Store</span></a>
@@ -677,16 +779,23 @@
   </div>
 </nav>
 <div class="nav-links-mobile" id="mobileNav">
-  <a href="index.html#home">Home</a>
-  <a href="index.html#promoters">Promoters</a>
-  <a href="index.html#features">Features</a>
-  <a href="index.html#reels">Reels</a>
-  <a href="index.html#videos">Media</a>
-  <a href="index.html#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#promoters">Promoters</a>
+  <a href="#features">Features</a>
+  <a href="#reels">Reels</a>
+  <a href="#videos">Media</a>
+  <a href="#contact">Contact</a>
   <a href="privacy-policy.html">Privacy Policy</a>
   <a href="terms-of-service.html">Terms</a>
   <a href="https://play.google.com/store/apps/details?id=com.glamorous.alldaysoftech" target="_blank" class="store-btn" style="margin: 0.5rem auto;"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
   <a href="https://apps.apple.com/in/app/glamorous-show-your-talent/id6745411065" target="_blank" class="store-btn" style="margin: 0.5rem auto;"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
+</div>
+
+<!-- Floating Logo (Third Logo Placement) -->
+<div class="floating-logo" id="floatingLogo">
+  <img src="logo.png" alt="GLAMOROUS" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+  <span style="display: none;">GLAMOROUS</span>
+  <span>✨ Show Your Talent</span>
 </div>
 
 <!-- HERO SECTION -->
@@ -697,13 +806,18 @@
   <div class="hero-overlay"></div>
   <div class="hero-content" data-aos="fade-up">
     <div class="trust-badge">
-      <i class="fas fa-check-circle"></i>
+      <div class="indian-flag">
+        <div class="flag-saffron"></div>
+        <div class="flag-white"></div>
+        <div class="flag-green"></div>
+        <i class="fas fa-star-of-life flag-wheel" style="color: #000080; font-size: 10px;"></i>
+      </div>
       <span>⭐ Trusted by Ravi Kishan • 10,000+ Creators • Made in India 🇮🇳</span>
     </div>
     <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;">Create. Earn. <span style="color: var(--gold);">Repeat.</span></h1>
-    <p style="font-size: 1.6rem; font-weight: 600; background: linear-gradient(135deg, var(--gold), var(--saffron)); -webkit-background-clip: text; background-clip: text; color: transparent;">Where India Goes Social</p>
-    <p style="font-size: 1.1rem; margin-bottom: 1rem;">जहाँ India social होता है</p>
-    <p style="font-size: 1rem; max-width: 550px; margin-bottom: 2rem;">India's homegrown platform where creators get paid. Trusted by celebrities and 10,000+ creators.</p>
+    <p style="font-size: 1.6rem; font-weight: 600; background: linear-gradient(135deg, var(--gold), var(--saffron)); -webkit-background-clip: text; background-clip: text; color: transparent;">India's Homegrown Social Media Platform</p>
+    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Where India Goes Social | जहाँ India social होता है</p>
+    <p style="font-size: 1rem; max-width: 550px; margin-bottom: 2rem;">GLAMOROUS: Show Your Talent — India's platform where creators get paid. Trusted by celebrities and 10,000+ creators.</p>
     <div style="display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
       <a href="https://play.google.com/store/apps/details?id=com.glamorous.alldaysoftech" target="_blank" class="store-btn"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
       <a href="https://apps.apple.com/in/app/glamorous-show-your-talent/id6745411065" target="_blank" class="store-btn"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
@@ -737,7 +851,7 @@
   <div style="text-align: center;">
     <div class="desi-badge">🌟 Trusted by India's Biggest Stars 🌟</div>
     <h2 class="section-title">Our <span>Promoters & Supporters</span></h2>
-    <p class="section-subtitle">Celebrities and influencers who believe in GLAMOROUS</p>
+    <p class="section-subtitle">Celebrities and influencers who believe in GLAMOROUS: Show Your Talent</p>
   </div>
   <div class="promoter-grid">
     <div class="promoter-card" data-aos="flip-left">
@@ -766,7 +880,7 @@
       </video>
       <div class="promoter-info">
         <h4>⭐ About GLAMOROUS</h4>
-        <p>"A platform where talent meets opportunity"</p>
+        <p>"A platform where talent meets opportunity — Show Your Talent!"</p>
         <p style="font-size: 0.8rem; color: #AAAAAA;">#GlamorousShowUrTalent</p>
       </div>
     </div>
@@ -776,9 +890,9 @@
 <!-- FEATURES SECTION -->
 <section id="features" style="padding: 4rem 0; background: linear-gradient(145deg, #08080E, #020208);">
   <div style="text-align: center;">
-    <div class="desi-badge">🔥 Why Creators Love Us 🔥</div>
+    <div class="desi-badge">🔥 Why Creators Love GLAMOROUS 🔥</div>
     <h2 class="section-title">Everything You Need to <span>Succeed</span></h2>
-    <p class="section-subtitle">Powerful tools to build your creative career</p>
+    <p class="section-subtitle">Powerful tools to build your creative career on India's homegrown social media platform</p>
   </div>
   <div class="features-grid">
     <div class="feature-card" data-aos="fade-up"><div class="feature-icon"><i class="fas fa-wallet"></i></div><h3>Get Paid</h3><p>Earn from content, engagement, and brand partnerships</p></div>
@@ -795,7 +909,7 @@
   <div style="text-align: center;">
     <div class="desi-badge">📱 Viral Reels 🔥</div>
     <h2 class="section-title">Trending <span>Reels</span> on GLAMOROUS</h2>
-    <p class="section-subtitle">Watch what's going viral across India</p>
+    <p class="section-subtitle">Watch what's going viral across India — Show Your Talent!</p>
   </div>
   <div class="reels-grid">
     <div class="reel-card" data-aos="zoom-in">
@@ -840,7 +954,7 @@
   <div style="text-align: center;">
     <div class="desi-badge">🎬 Featured Videos 🎬</div>
     <h2 class="section-title">Watch <span>GLAMOROUS</span> in Action</h2>
-    <p class="section-subtitle">From grand launch to creator showcases</p>
+    <p class="section-subtitle">From grand launch to creator showcases — Show Your Talent</p>
   </div>
   <div class="video-showcase-grid">
     <div class="video-card" data-aos="zoom-in">
@@ -862,7 +976,7 @@
 <section style="padding: 2rem 0 4rem;">
   <div style="text-align: center;">
     <h2 class="section-title">Follow Us on <span>Instagram</span></h2>
-    <p class="section-subtitle">Join our growing community of creators</p>
+    <p class="section-subtitle">Join our growing community of creators — Show Your Talent!</p>
     <a href="https://www.instagram.com/glamorous_showurtalent?igsh=bWx3MDd5Ym9xbzk4&utm_source=qr" target="_blank" class="instagram-link">
       <i class="fab fa-instagram fa-2x"></i>
       <span style="font-size: 1.1rem;">@glamorous_showurtalent</span>
@@ -874,8 +988,8 @@
 <section id="contact" style="padding: 4rem 0; max-width: 1000px; margin: 0 auto;">
   <div class="glass" style="padding: 2.5rem; margin: 0 2rem; text-align: center;" data-aos="fade-up">
     <div class="desi-badge">🇮🇳 Made in India • Made for India 🇮🇳</div>
-    <h2 style="font-size: 2rem;">India's <span style="color: var(--gold);">Homegrown Social Platform</span></h2>
-    <p style="margin-top: 1.5rem; color: #DDDDDD;">GLAMOROUS — Where India Goes Social. From content creation to earning rewards, we empower creators across the nation to turn their passion into profession.</p>
+    <h2 style="font-size: 2rem;">India's <span style="color: var(--gold);">Homegrown Social Media Platform</span></h2>
+    <p style="margin-top: 1.5rem; color: #DDDDDD;">GLAMOROUS: Show Your Talent — Where India Goes Social. From content creation to earning rewards, we empower creators across the nation to turn their passion into profession.</p>
     <p style="margin-top: 1rem;"><i class="fas fa-phone-alt" style="color: var(--gold);"></i> +91-8957520758 &nbsp;|&nbsp; <i class="fas fa-envelope" style="color: var(--gold);"></i> info@glamorousapp.com</p>
     <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
       <input type="text" placeholder="Your Name" style="padding: 12px 20px; border-radius: 50px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;">
@@ -890,7 +1004,7 @@
 <section style="padding: 2rem 2rem 4rem;">
   <div class="glass" style="text-align: center; padding: 3rem; max-width: 900px; margin: 0 auto;">
     <h2 style="font-size: 2rem;">Ready to start your creator journey?</h2>
-    <p style="margin: 1rem 0; color: #CCCCCC;">Join 10,000+ creators already earning on GLAMOROUS</p>
+    <p style="margin: 1rem 0; color: #CCCCCC;">Join 10,000+ creators already earning on GLAMOROUS: Show Your Talent</p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="https://play.google.com/store/apps/details?id=com.glamorous.alldaysoftech" target="_blank" class="store-btn"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
       <a href="https://apps.apple.com/in/app/glamorous-show-your-talent/id6745411065" target="_blank" class="store-btn"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
@@ -898,14 +1012,29 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER with Logo (Second Logo Placement) -->
 <footer class="footer">
-  <p>© 2026 GLAMOROUS — Made with ❤️ in India | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+  <div class="footer-logo">
+    <img src="logo.png" alt="GLAMOROUS" height="32" onerror="this.style.display='none';">
+    <span style="color: var(--gold); font-weight: 600;">GLAMOROUS: Show Your Talent</span>
+  </div>
+  <p>© 2026 GLAMOROUS — India's Homegrown Social Media Platform | Made with ❤️ in India</p>
+  <p style="margin-top: 0.5rem;"><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({ once: true, duration: 800 });
+
+  // Logo click to home
+  document.getElementById('logoHomeLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('floatingLogo')?.addEventListener('click', () => {
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+  });
 
   const videoEl = document.getElementById('heroVideo');
   const toggleBtn = document.getElementById('toggleVideoBtn');
@@ -923,7 +1052,7 @@
 
   document.getElementById('contactForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert("📩 Thanks for reaching out! Team GLAMOROUS will connect soon. Jai Hind!");
+    alert("📩 Thanks for reaching out! Team GLAMOROUS will connect soon. Show Your Talent, Jai Hind!");
     e.target.reset();
   });
 
