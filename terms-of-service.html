@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | GLAMOROUS — India's Homegrown Social Platform</title>
+  <meta name="description" content="Terms of Service for GLAMOROUS — India's homegrown social media platform. Understand your rights and responsibilities.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020208;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    :root {
+      --gold: #F5B042;
+      --saffron: #FF9933;
+      --green: #138808;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(2, 2, 8, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(245, 176, 66, 0.3);
+      padding: 1rem 5%;
+    }
+
+    .navbar .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--gold), var(--saffron), var(--green));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .main-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+
+    .policy-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .policy-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .policy-header h1 span {
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .policy-header p {
+      color: #AAAAAA;
+    }
+
+    .policy-section {
+      background: rgba(18, 18, 28, 0.6);
+      border-radius: 24px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(245, 176, 66, 0.2);
+    }
+
+    .policy-section h2 {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .policy-section h3 {
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .policy-section p, .policy-section li {
+      color: #CCCCCC;
+      margin-bottom: 0.75rem;
+    }
+
+    .policy-section ul {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .policy-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+      background: rgba(245, 176, 66, 0.15);
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 1rem 0;
+      border-left: 3px solid var(--gold);
+    }
+
+    .last-updated {
+      text-align: center;
+      color: #888888;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(245,176,66,0.2);
+    }
+
+    .footer {
+      border-top: 1px solid rgba(245,176,66,0.2);
+      padding: 2rem 5%;
+      text-align: center;
+      color: #888888;
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .policy-header h1 {
+        font-size: 1.8rem;
+      }
+      .policy-section {
+        padding: 1.5rem;
+      }
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      cursor: pointer;
+      color: var(--gold);
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgba(2,2,8,0.98);
+      backdrop-filter: blur(24px);
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: 1rem;
+      display: none;
+      z-index: 999;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .mobile-nav a {
+      color: white;
+      font-size: 1.1rem;
+      padding: 0.8rem;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .mobile-nav a:hover {
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🇮🇳</div>
+      <div class="logo-text">GLAMOROUS</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms</a>
+    </div>
+    <div class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="index.html#features">Features</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms-of-service.html">Terms</a>
+</div>
+
+<main class="main-content">
+  <div class="policy-header">
+    <h1>Terms of <span>Service</span></h1>
+    <p>Your agreement to use GLAMOROUS — India's homegrown social platform</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using GLAMOROUS ("the App," "the Platform"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Platform. These Terms apply to all users, including creators, viewers, and brands.</p>
+    <div class="highlight">
+      <strong>🇮🇳 GLAMOROUS is India's homegrown social platform</strong> — committed to empowering creators and fostering a positive, safe community.
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Eligibility</h2>
+    <p>To use GLAMOROUS, you must:</p>
+    <ul>
+      <li>Be at least 13 years old (or the age of majority in your jurisdiction)</li>
+      <li>Have the legal capacity to enter into a binding agreement</li>
+      <li>Not be prohibited from using the Platform under applicable laws</li>
+      <li>Provide accurate and complete registration information</li>
+    </ul>
+    <p>If you are under 18, you confirm that you have parental/guardian consent to use the Platform.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. Account Registration</h2>
+    <p>To access certain features, you must create an account. You are responsible for:</p>
+    <ul>
+      <li>Maintaining the confidentiality of your login credentials</li>
+      <li>All activities that occur under your account</li>
+      <li>Notifying us immediately of any unauthorized use</li>
+      <li>Providing accurate and up-to-date information</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Content and Intellectual Property</h2>
+    <h3>4.1 Your Content</h3>
+    <p>You retain ownership of all content you create and upload to GLAMOROUS ("Your Content"). By uploading content, you grant us a non-exclusive, royalty-free, worldwide license to host, store, display, and distribute Your Content on the Platform for the purpose of providing our services.</p>
+    
+    <h3>4.2 Content Standards</h3>
+    <p>You agree not to upload content that:</p>
+    <ul>
+      <li>Violates any applicable laws or regulations</li>
+      <li>Infringes on third-party intellectual property rights</li>
+      <li>Contains hate speech, harassment, or promotes violence</li>
+      <li>Contains nudity, sexually explicit material, or graphic violence</li>
+      <li>Promotes illegal activities or self-harm</li>
+      <li>Contains spam, malware, or deceptive content</li>
+      <li>Impersonates another person or entity</li>
+    </ul>
+    
+    <h3>4.3 GLAMOROUS Intellectual Property</h3>
+    <p>The GLAMOROUS name, logo, design, and all associated trademarks are owned by GLAMOROUS. You may not use our trademarks without prior written consent.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Creator Program and Earnings</h2>
+    <h3>5.1 Earning Opportunities</h3>
+    <p>GLAMOROUS offers creators the opportunity to earn money through content creation, engagement, and brand partnerships. Earnings are calculated based on:</p>
+    <ul>
+      <li>Video views and engagement metrics</li>
+      <li>Brand sponsorship and partnerships</li>
+      <li>Audition and casting opportunities</li>
+      <li>Virtual gifts and fan support</li>
+    </ul>
+    
+    <h3>5.2 Payment Terms</h3>
+    <p>Earnings are paid out according to our payment schedule, typically monthly. To receive payments, you must provide valid payment information (bank account, UPI ID, or payment wallet). GLAMOROUS reserves the right to withhold payments in case of policy violations or fraudulent activity.</p>
+    
+    <h3>5.3 Tax Responsibility</h3>
+    <p>You are solely responsible for reporting and paying any taxes applicable to your earnings. GLAMOROUS may be required to withhold taxes as per applicable laws.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Community Guidelines</h2>
+    <p>We are building a positive, inclusive community. You agree to:</p>
+    <ul>
+      <li>Treat other users with respect and kindness</li>
+      <li>Not harass, bully, or intimidate others</li>
+      <li>Not post misleading or false information</li>
+      <li>Not engage in spam or deceptive practices</li>
+      <li>Not attempt to manipulate engagement metrics</li>
+      <li>Not use the platform for illegal activities</li>
+    </ul>
+    <p>Violation of these guidelines may result in content removal, account suspension, or permanent ban from the Platform.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Auditions and Casting Opportunities</h2>
+    <p>GLAMOROUS connects creators with audition and casting opportunities. By participating in these opportunities:</p>
+    <ul>
+      <li>You acknowledge that GLAMOROUS facilitates connections but is not responsible for the outcome of any audition</li>
+      <li>You agree to provide accurate information about your skills and availability</li>
+      <li>You understand that casting decisions are made by third-party partners</li>
+      <li>GLAMOROUS does not guarantee selection for any opportunity</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Prohibited Activities</h2>
+    <p>You may not:</p>
+    <ul>
+      <li>Use bots, automation, or artificial means to interact with the Platform</li>
+      <li>Attempt to reverse engineer, decompile, or disassemble any part of the Platform</li>
+      <li>Interfere with or disrupt the Platform's servers or networks</li>
+      <li>Collect user information without consent</li>
+      <li>Create multiple accounts for deceptive purposes</li>
+      <li>Sell, transfer, or license your account to others</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Termination</h2>
+    <p>We reserve the right to suspend or terminate your account at our discretion, including for:</p>
+    <ul>
+      <li>Violation of these Terms or Community Guidelines</li>
+      <li>Fraudulent or illegal activity</li>
+      <li>Extended inactivity</li>
+      <li>At your request (account deletion)</li>
+    </ul>
+    <p>Upon termination, your content may be removed, and unpaid earnings may be forfeited if termination was due to policy violations.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10. Disclaimer of Warranties</h2>
+    <p>GLAMOROUS is provided "as is" and "as available." We do not warrant that the Platform will be uninterrupted, error-free, or free from harmful components. We disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>11. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, GLAMOROUS shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Platform. Our total liability shall not exceed the amount you earned on the Platform in the 12 months preceding the claim.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>12. Indemnification</h2>
+    <p>You agree to indemnify and hold GLAMOROUS harmless from any claims, damages, losses, or expenses arising from your use of the Platform, your content, or your violation of these Terms.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>13. Modifications to Terms</h2>
+    <p>We may update these Terms from time to time. We will notify you of material changes through the App, website, or email. Continued use of the Platform after changes constitutes acceptance of the revised Terms.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>14. Governing Law</h2>
+    <p>These Terms shall be governed by the laws of India. Any disputes arising from these Terms or your use of GLAMOROUS shall be subject to the exclusive jurisdiction of the courts in [Your City], India.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>15. Contact Us</h2>
+    <p>If you have questions about these Terms, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> info@glamorousapp.com</li>
+      <li><strong>Phone:</strong> +91-8957520758</li>
+      <li><strong>Address:</strong> GLAMOROUS Headquarters, India</li>
+    </ul>
+  </div>
+
+  <div class="last-updated">
+    Last Updated: March 24, 2025
+  </div>
+</main>
+
+<footer class="footer">
+  <p>© 2025 GLAMOROUS — Made with ❤️ in India | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+</footer>
+
+<script>
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  mobileBtn?.addEventListener('click', () => {
+    mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
+</body>
+</html>
