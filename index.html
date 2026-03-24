@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>GLAMOROUS | India's Homegrown Social Platform — Create. Earn. Repeat.</title>
-  <meta name="description" content="GLAMOROUS is India's new social platform where creators get paid for their talent. Join 10,000+ creators already earning. Download now.">
-  <meta name="keywords" content="Indian social media, creator app, earn from content, GLAMOROUS, Made in India app, desi social app">
+  <meta name="description" content="GLAMOROUS is India's new social platform where creators get paid for their talent. Trusted by Ravi Kishan and 10,000+ creators. Download now.">
+  <meta name="keywords" content="Indian social media, creator app, earn from content, GLAMOROUS, Ravi Kishan, Made in India app">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -28,17 +28,12 @@
       scroll-behavior: smooth;
     }
 
-    /* Premium Color Palette */
     :root {
       --gold: #F5B042;
       --gold-dark: #E09D2E;
       --saffron: #FF9933;
       --green: #138808;
       --diamond: #F0F4FF;
-      --pure-white: #FFFFFF;
-      --pure-black: #020208;
-      --gray-600: #A0A0A0;
-      --gray-700: #808080;
     }
 
     ::-webkit-scrollbar { width: 6px; }
@@ -167,7 +162,7 @@
       color: #FFFFFF;
     }
 
-    /* Hero Section - Full Screen Cinematic */
+    /* Hero Section */
     .hero-wrapper {
       position: relative;
       height: 100vh;
@@ -305,17 +300,91 @@
       margin-bottom: 1.5rem;
     }
 
-    .trust-badge i {
-      color: var(--gold);
-    }
-
-    .trust-badge span {
-      font-size: 0.85rem;
-      font-weight: 500;
+    /* Sections */
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
       color: #FFFFFF;
     }
 
-    /* Stats Section */
+    .section-title span {
+      background: linear-gradient(135deg, var(--gold), var(--saffron), var(--diamond));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #A0A0A0;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .desi-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--saffron), var(--green));
+      padding: 5px 20px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    /* Promoter Cards Grid */
+    .promoter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .promoter-card {
+      background: rgba(18, 18, 28, 0.7);
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.4s;
+      border: 1px solid rgba(245,176,66,0.2);
+    }
+
+    .promoter-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+    }
+
+    .promoter-card video, .promoter-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      background: #000;
+    }
+
+    /* For vertical/reel videos - maintain aspect ratio */
+    .reel-video {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .promoter-info {
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .promoter-info h4 {
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Stats */
     .stats-container {
       display: flex;
       justify-content: center;
@@ -328,7 +397,6 @@
 
     .stat-item {
       text-align: center;
-      padding: 0.5rem 1.5rem;
     }
 
     .stat-number {
@@ -373,39 +441,7 @@
 
     .tagline-english {
       font-size: 0.85rem;
-      opacity: 0.85;
       color: #FFFFFF;
-    }
-
-    /* Steps Grid */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .step-card {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(18, 18, 28, 0.5);
-      border-radius: 28px;
-    }
-
-    .step-number {
-      width: 56px;
-      height: 56px;
-      background: linear-gradient(135deg, var(--gold), var(--saffron));
-      border-radius: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.5rem;
-      margin: 0 auto 1rem;
-      color: #000;
     }
 
     /* Features Grid */
@@ -449,69 +485,19 @@
       color: var(--gold);
     }
 
-    .feature-card h3 {
-      margin-bottom: 0.75rem;
-      color: #FFFFFF;
-    }
-
-    .feature-card p {
-      color: #AAAAAA;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    /* Section Titles */
-    .section-title {
-      font-size: 2.8rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #FFFFFF;
-    }
-
-    .section-title span {
-      background: linear-gradient(135deg, var(--gold), var(--saffron), var(--diamond));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--gray-600);
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 3rem;
-    }
-
-    .desi-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--saffron), var(--green));
-      padding: 5px 20px;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 1rem;
-    }
-
-    /* Video Section */
-    .video-section {
-      background: linear-gradient(145deg, #08080E, #020208);
-    }
-
-    .video-grid {
+    /* Video Showcase Grid */
+    .video-showcase-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 2rem;
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
       padding: 2rem;
     }
 
     .video-card {
       background: #0A0A12;
-      border-radius: 32px;
+      border-radius: 28px;
       overflow: hidden;
       transition: all 0.4s;
     }
@@ -523,111 +509,93 @@
 
     .video-card video {
       width: 100%;
-      display: block;
+      height: 320px;
+      object-fit: cover;
+      background: #000;
     }
 
-    .video-caption {
-      padding: 1.2rem;
-      text-align: center;
+    /* Reels Section - Special handling for vertical videos */
+    .reels-section {
+      background: linear-gradient(145deg, #08080E, #020208);
     }
 
-    .video-caption strong {
-      color: var(--gold);
-    }
-
-    /* Testimonials */
-    .testimonials-grid {
+    .reels-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
     }
 
-    .testimonial-card {
-      background: rgba(18, 18, 28, 0.75);
-      backdrop-filter: blur(12px);
-      border-radius: 28px;
-      padding: 2rem;
+    .reel-card {
+      background: rgba(18, 18, 28, 0.7);
+      border-radius: 32px;
+      overflow: hidden;
+      transition: all 0.4s;
       border: 1px solid rgba(245,176,66,0.2);
     }
 
-    .testimonial-avatar {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, var(--gold), var(--saffron));
-      border-radius: 100px;
+    .reel-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+    }
+
+    .reel-video-container {
+      position: relative;
+      background: #000;
       display: flex;
-      align-items: center;
       justify-content: center;
-      margin-bottom: 1rem;
+      align-items: center;
     }
 
-    .testimonial-text {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #DDDDDD;
-      margin-bottom: 1rem;
+    .reel-video-container video {
+      width: 100%;
+      height: auto;
+      max-height: 550px;
+      object-fit: contain;
     }
 
-    .testimonial-name {
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 0.25rem;
-    }
-
-    .testimonial-role {
-      font-size: 0.8rem;
-      color: #AAAAAA;
-    }
-
-    .stars {
-      margin-bottom: 1rem;
-    }
-
-    .stars i {
-      color: var(--gold);
-      font-size: 0.8rem;
-      margin-right: 2px;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      background: linear-gradient(135deg, #1A1528, #020208);
+    .reel-info {
+      padding: 1.2rem;
       text-align: center;
-      border-radius: 2rem;
-      margin: 4rem auto;
-      padding: 4rem 2rem;
-      max-width: 1000px;
     }
 
-    .cta-section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+    .reel-info h4 {
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Instagram Link */
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45);
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .instagram-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
     /* Responsive */
     @media (max-width: 1024px) {
       .tagline-grid,
-      .steps-grid,
-      .features-grid,
-      .testimonials-grid {
+      .features-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero-content h1 {
-        font-size: 2.5rem;
       }
     }
 
     @media (max-width: 768px) {
       .tagline-grid,
-      .steps-grid,
-      .features-grid,
-      .testimonials-grid {
+      .features-grid {
         grid-template-columns: 1fr;
       }
       .nav-links {
@@ -636,6 +604,9 @@
       .mobile-menu-btn {
         display: block;
       }
+      .section-title {
+        font-size: 2rem;
+      }
       .stats-container {
         gap: 1.5rem;
         padding: 2rem;
@@ -643,17 +614,9 @@
       .stat-number {
         font-size: 2rem;
       }
-      .section-title {
-        font-size: 2rem;
-      }
-      .store-btn {
-        padding: 10px 20px;
-      }
-      .store-icon {
-        font-size: 1.6rem;
-      }
-      .store-text strong {
-        font-size: 0.9rem;
+      .promoter-grid, .video-showcase-grid, .reels-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
       }
     }
 
@@ -687,16 +650,6 @@
       text-decoration: none;
       font-weight: 600;
     }
-
-    .nav-links-mobile a:hover {
-      color: var(--gold);
-    }
-
-    .nav-links-mobile .store-btn {
-      justify-content: center;
-      margin: 0.5rem auto;
-      width: 90%;
-    }
   </style>
 </head>
 <body>
@@ -713,10 +666,10 @@
     </div>
     <div class="nav-links">
       <a href="#home" class="active">Home</a>
-      <a href="#how-it-works">How It Works</a>
+      <a href="#promoters">Promoters</a>
       <a href="#features">Features</a>
-      <a href="#showcase">Trending</a>
-      <a href="#creators">Creators</a>
+      <a href="#reels">Reels</a>
+      <a href="#videos">Media</a>
       <a href="#contact">Contact</a>
       <div style="display: flex; gap: 10px;">
         <a href="#" class="nav-store-btn" id="navPlayStore"><i class="fab fa-google-play"></i><span>Play Store</span></a>
@@ -728,58 +681,50 @@
 </nav>
 <div class="nav-links-mobile" id="mobileNav">
   <a href="#home">Home</a>
-  <a href="#how-it-works">How It Works</a>
+  <a href="#promoters">Promoters</a>
   <a href="#features">Features</a>
-  <a href="#showcase">Trending</a>
-  <a href="#creators">Creators</a>
+  <a href="#reels">Reels</a>
+  <a href="#videos">Media</a>
   <a href="#contact">Contact</a>
-  <a href="#" class="store-btn" id="mobilePlayStore"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
-  <a href="#" class="store-btn" id="mobileAppStore"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
+  <a href="#" class="store-btn" id="mobilePlayStore" style="margin: 0.5rem auto;"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
+  <a href="#" class="store-btn" id="mobileAppStore" style="margin: 0.5rem auto;"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
 </div>
 
-<!-- HERO SECTION - FULL SCREEN CINEMATIC -->
+<!-- HERO SECTION -->
 <section id="home" class="hero-wrapper">
   <video id="heroVideo" autoplay muted loop playsinline>
     <source src="video1.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+  <div class="hero-content" data-aos="fade-up">
     <div class="trust-badge">
       <i class="fas fa-check-circle"></i>
-      <span>⭐ 10,000+ Creators • 4.8★ Rating • Made in India 🇮🇳</span>
+      <span>⭐ Trusted by Ravi Kishan • 10,000+ Creators • Made in India 🇮🇳</span>
     </div>
-    <h1 style="font-size: 3.8rem; font-weight: 800; margin-bottom: 0.5rem;">Create. Earn. <span style="color: var(--gold);">Repeat.</span></h1>
-    <p style="font-size: 1.6rem; font-weight: 600; background: linear-gradient(135deg, var(--gold), var(--saffron)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 0.5rem;">Where India Goes Social</p>
+    <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;">Create. Earn. <span style="color: var(--gold);">Repeat.</span></h1>
+    <p style="font-size: 1.6rem; font-weight: 600; background: linear-gradient(135deg, var(--gold), var(--saffron)); -webkit-background-clip: text; background-clip: text; color: transparent;">Where India Goes Social</p>
     <p style="font-size: 1.1rem; margin-bottom: 1rem;">जहाँ India social होता है</p>
-    <p style="font-size: 1rem; max-width: 550px; margin-bottom: 2rem;">India's homegrown social platform where creators get paid for their talent. Join 10,000+ creators already earning.</p>
+    <p style="font-size: 1rem; max-width: 550px; margin-bottom: 2rem;">India's homegrown platform where creators get paid. Trusted by celebrities and 10,000+ creators.</p>
     <div style="display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
       <a href="#" class="store-btn" id="heroPlayStore"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
       <a href="#" class="store-btn" id="heroAppStore"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
     </div>
-    <button id="toggleVideoBtn" style="background: rgba(0,0,0,0.5); border: 1px solid var(--gold); border-radius: 40px; padding: 8px 22px; color: white; cursor: pointer; font-size: 0.85rem; transition: 0.3s;"><i class="fas fa-sync-alt"></i> Switch Showreel</button>
+    <button id="toggleVideoBtn" style="background: rgba(0,0,0,0.5); border: 1px solid var(--gold); border-radius: 40px; padding: 8px 22px; color: white; cursor: pointer;"><i class="fas fa-sync-alt"></i> Switch Showreel</button>
   </div>
 </section>
 
 <!-- STATS SECTION -->
-<section style="background: linear-gradient(145deg, #08080E, #020208);">
+<section>
   <div class="stats-container">
-    <div class="stat-item" data-aos="zoom-in">
-      <div class="stat-number">10,000+</div>
-      <p style="margin-top: 8px; color: #FFFFFF;">Active Creators</p>
-    </div>
-    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
-      <div class="stat-number">4.8★</div>
-      <p style="margin-top: 8px; color: #FFFFFF;">App Rating</p>
-    </div>
-    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-      <div class="stat-number">🇮🇳</div>
-      <p style="margin-top: 8px; color: #FFFFFF;">Made in India</p>
-    </div>
+    <div class="stat-item" data-aos="zoom-in"><div class="stat-number">10,000+</div><p>Active Creators</p></div>
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100"><div class="stat-number">4.8★</div><p>App Rating</p></div>
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200"><div class="stat-number">🇮🇳</div><p>Made in India</p></div>
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300"><div class="stat-number">✨</div><p>Celebrity Trusted</p></div>
   </div>
 </section>
 
-<!-- TAGLINES SECTION - FOUNDER'S VISION -->
-<section style="padding: 2rem 0;">
+<!-- TAGLINES -->
+<section>
   <div class="tagline-grid">
     <div class="tagline-card" data-aos="fade-up"><div class="tagline-hindi">👉 अपना app. अपनी आवाज़.</div><div class="tagline-english">Our app. Our voice.</div></div>
     <div class="tagline-card" data-aos="fade-up" data-aos-delay="100"><div class="tagline-hindi">👉 देश का platform, दुनिया का impact.</div><div class="tagline-english">India's platform, global impact.</div></div>
@@ -788,45 +733,121 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS SECTION -->
-<section id="how-it-works" style="padding: 4rem 0;">
-  <div class="container" style="max-width: 1300px; margin: 0 auto; text-align: center;">
-    <div class="desi-badge">✨ Simple. Powerful. Rewarding. ✨</div>
-    <h2 class="section-title">How <span>GLAMOROUS</span> Works</h2>
-    <p class="section-subtitle">Start your creator journey in four simple steps</p>
+<!-- PROMOTERS SECTION - CELEBRITY ENDORSEMENTS -->
+<section id="promoters" style="padding: 4rem 0;">
+  <div style="text-align: center;">
+    <div class="desi-badge">🌟 Trusted by India's Biggest Stars 🌟</div>
+    <h2 class="section-title">Our <span>Promoters & Supporters</span></h2>
+    <p class="section-subtitle">Celebrities and influencers who believe in GLAMOROUS</p>
   </div>
-  <div class="steps-grid">
-    <div class="step-card" data-aos="fade-up"><div class="step-number">1</div><h3>Create Profile</h3><p style="color: #AAAAAA;">Sign up in 60 seconds</p></div>
-    <div class="step-card" data-aos="fade-up" data-aos-delay="100"><div class="step-number">2</div><h3>Share Content</h3><p style="color: #AAAAAA;">Post videos, showcase your talent</p></div>
-    <div class="step-card" data-aos="fade-up" data-aos-delay="200"><div class="step-number">3</div><h3>Grow Audience</h3><p style="color: #AAAAAA;">Connect with millions across India</p></div>
-    <div class="step-card" data-aos="fade-up" data-aos-delay="300"><div class="step-number">4</div><h3>Earn Rewards</h3><p style="color: #AAAAAA;">Get paid for your creativity</p></div>
+  <div class="promoter-grid">
+    <!-- Ravi Kishan Video -->
+    <div class="promoter-card" data-aos="flip-left">
+      <video controls poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='100%25' height='100%25' fill='%23111111'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23F5B042' font-size='14'%3ERavi Kishan Ji%3C/text%3E%3C/svg%3E">
+        <source src="@ravikishann ji grateful for your support & wishes for Bharat khilta Kamal 🇮🇳🪷 india’s got ch.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="promoter-info">
+        <h4>🙏 Ravi Kishan Ji</h4>
+        <p>Member of Parliament | Actor | GLAMOROUS Supporter</p>
+        <p style="font-size: 0.85rem; color: #AAAAAA; margin-top: 0.5rem;">"Bharat khilta Kamal — India's got talent, India's got GLAMOROUS!"</p>
+      </div>
+    </div>
+    <!-- Promoter Photo -->
+    <div class="promoter-card" data-aos="flip-left" data-aos-delay="100">
+      <img src="627744015_17880005418463291_1189474416062605219_n.jpg" alt="GLAMOROUS Promoter" style="width: 100%; height: 320px; object-fit: cover;">
+      <div class="promoter-info">
+        <h4>✨ GLAMOROUS Ambassador</h4>
+        <p>Official Brand Promoter</p>
+      </div>
+    </div>
+    <!-- Creator Testimonial Video - Fixed with proper handling -->
+    <div class="promoter-card" data-aos="flip-left" data-aos-delay="200">
+      <video controls style="height: 320px; object-fit: contain; background: #000;">
+        <source src="#Glamorousshowurtalent #trendingnow #reelitfeelit #trendingreels❤️ #viralreels #downloadnow #inc.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="promoter-info">
+        <h4>⭐ Creator Testimonial</h4>
+        <p>"GLAMOROUS is changing the game for Indian creators!"</p>
+        <p style="font-size: 0.8rem; color: #AAAAAA;">#GlamorousShowUrTalent #TrendingNow</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FEATURES SECTION -->
 <section id="features" style="padding: 4rem 0; background: linear-gradient(145deg, #08080E, #020208);">
-  <div class="container" style="max-width: 1300px; margin: 0 auto; text-align: center;">
+  <div style="text-align: center;">
     <div class="desi-badge">🔥 Why Creators Love Us 🔥</div>
     <h2 class="section-title">Everything You Need to <span>Succeed</span></h2>
     <p class="section-subtitle">Powerful tools to build your creative career</p>
   </div>
   <div class="features-grid">
-    <div class="feature-card" data-aos="fade-up"><div class="feature-icon"><i class="fas fa-wallet"></i></div><h3>Get Paid</h3><p>Earn money from your content, engagement, and brand partnerships</p></div>
-    <div class="feature-card" data-aos="fade-up" data-aos-delay="100"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Grow Audience</h3><p>Reach millions across India with smart content discovery</p></div>
-    <div class="feature-card" data-aos="fade-up" data-aos-delay="200"><div class="feature-icon"><i class="fas fa-trophy"></i></div><h3>Get Discovered</h3><p>Opportunities for brand deals, auditions, and media features</p></div>
-    <div class="feature-card" data-aos="fade-up" data-aos-delay="300"><div class="feature-icon"><i class="fas fa-graduation-cap"></i></div><h3>Learn & Grow</h3><p>Masterclasses from top creators and industry experts</p></div>
-    <div class="feature-card" data-aos="fade-up" data-aos-delay="400"><div class="feature-icon"><i class="fas fa-users"></i></div><h3>Join Community</h3><p>Connect with creators who share your passion</p></div>
-    <div class="feature-card" data-aos="fade-up" data-aos-delay="500"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Safe Space</h3><p>Positive environment to create and grow without toxicity</p></div>
+    <div class="feature-card" data-aos="fade-up"><div class="feature-icon"><i class="fas fa-wallet"></i></div><h3>Get Paid</h3><p>Earn from content, engagement, and brand partnerships</p></div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="100"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Grow Audience</h3><p>Reach millions across India with smart discovery</p></div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="200"><div class="feature-icon"><i class="fas fa-trophy"></i></div><h3>Get Discovered</h3><p>Opportunities for brand deals and media features</p></div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="300"><div class="feature-icon"><i class="fas fa-users"></i></div><h3>Join Community</h3><p>Connect with creators who share your passion</p></div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="400"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Safe Space</h3><p>Positive environment to create and grow</p></div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="500"><div class="feature-icon"><i class="fas fa-graduation-cap"></i></div><h3>Learn & Grow</h3><p>Masterclasses from top creators</p></div>
   </div>
 </section>
 
-<!-- VIDEO SHOWCASE SECTION -->
-<section id="showcase" class="video-section" style="padding: 4rem 0;">
-  <div class="container" style="max-width: 1300px; margin: 0 auto; text-align: center;">
-    <h2 class="section-title">🔥 <span>Trending on GLAMOROUS</span> 🔥</h2>
-    <p class="section-subtitle">Watch what India is creating and sharing</p>
+<!-- REELS SECTION - SPECIAL HANDLING FOR VERTICAL VIDEOS -->
+<section id="reels" class="reels-section" style="padding: 4rem 0;">
+  <div style="text-align: center;">
+    <div class="desi-badge">📱 Viral Reels 🔥</div>
+    <h2 class="section-title">Trending <span>Reels</span> on GLAMOROUS</h2>
+    <p class="section-subtitle">Watch what's going viral across India</p>
   </div>
-  <div class="video-grid">
+  <div class="reels-grid">
+    <!-- Reel 1 - Download Now Video -->
+    <div class="reel-card" data-aos="zoom-in">
+      <div class="reel-video-container">
+        <video controls style="width: 100%; max-height: 550px; object-fit: contain; background: #000;">
+          <source src="Download Glamorous Now @glamorous_showurtalent #creator #instagram #art #artist #love creative c.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="reel-info">
+        <h4>📲 Download Now — Join the Creator Revolution</h4>
+        <p style="color: #AAAAAA;">@glamorous_showurtalent • Trending Reel</p>
+        <div style="margin-top: 0.5rem;">
+          <i class="fas fa-heart" style="color: #ff4444;"></i> 15.2K
+          <i class="fas fa-comment" style="color: var(--gold); margin-left: 1rem;"></i> 1.2K
+          <i class="fas fa-share" style="color: var(--green); margin-left: 1rem;"></i> 3.4K
+        </div>
+      </div>
+    </div>
+    <!-- Reel 2 - Creator Testimonial -->
+    <div class="reel-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="reel-video-container">
+        <video controls style="width: 100%; max-height: 550px; object-fit: contain; background: #000;">
+          <source src="#Glamorousshowurtalent #trendingnow #reelitfeelit #trendingreels❤️ #viralreels #downloadnow #inc.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="reel-info">
+        <h4>⭐ "GLAMOROUS is changing the game for Indian creators!"</h4>
+        <p style="color: #AAAAAA;">#GlamorousShowUrTalent • #TrendingNow</p>
+        <div style="margin-top: 0.5rem;">
+          <i class="fas fa-heart" style="color: #ff4444;"></i> 28.7K
+          <i class="fas fa-comment" style="color: var(--gold); margin-left: 1rem;"></i> 2.1K
+          <i class="fas fa-share" style="color: var(--green); margin-left: 1rem;"></i> 5.2K
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MEDIA SECTION - LANDSCAPE VIDEOS -->
+<section id="videos" style="padding: 4rem 0;">
+  <div style="text-align: center;">
+    <div class="desi-badge">🎬 Featured Videos 🎬</div>
+    <h2 class="section-title">Watch <span>GLAMOROUS</span> in Action</h2>
+    <p class="section-subtitle">From grand launch to creator showcases</p>
+  </div>
+  <div class="video-showcase-grid">
     <div class="video-card" data-aos="zoom-in">
       <video controls>
         <source src="video1.mp4" type="video/mp4">
@@ -842,54 +863,39 @@
   </div>
 </section>
 
-<!-- CREATOR STORIES SECTION -->
-<section id="creators" style="padding: 4rem 0;">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-    <h2 class="section-title">Real <span>Creator Stories</span> ❤️</h2>
-    <p class="section-subtitle">Meet the voices shaping India's creative future</p>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card" data-aos="fade-up">
-      <div class="testimonial-avatar"><i class="fas fa-user" style="color: #000;"></i></div>
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-      <p class="testimonial-text">"GLAMOROUS changed my life. I went from 0 to 50K followers in 3 months, and I'm actually earning from my passion!"</p>
-      <p class="testimonial-name">Priya Sharma</p>
-      <p class="testimonial-role">Dance Creator • 50K followers</p>
-    </div>
-    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-      <div class="testimonial-avatar"><i class="fas fa-user" style="color: #000;"></i></div>
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-      <p class="testimonial-text">"Finally a platform that values Indian creators. The earning potential is real, and the community is incredible."</p>
-      <p class="testimonial-name">Rahul Verma</p>
-      <p class="testimonial-role">Comedy Creator • 2.3M views</p>
-    </div>
-    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-      <div class="testimonial-avatar"><i class="fas fa-user" style="color: #000;"></i></div>
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-      <p class="testimonial-text">"As a singer from a small town, GLAMOROUS gave me the stage I never had. Now brands are reaching out to me!"</p>
-      <p class="testimonial-name">Anjali Nair</p>
-      <p class="testimonial-role">Musician • Featured Artist</p>
-    </div>
+<!-- INSTAGRAM & SOCIAL CONNECT -->
+<section style="padding: 2rem 0 4rem;">
+  <div style="text-align: center;">
+    <h2 class="section-title">Follow Us on <span>Instagram</span></h2>
+    <p class="section-subtitle">Join our growing community of creators</p>
+    <a href="https://www.instagram.com/glamorous_showurtalent?igsh=bWx3MDd5Ym9xbzk4&utm_source=qr" target="_blank" class="instagram-link">
+      <i class="fab fa-instagram fa-2x"></i>
+      <span style="font-size: 1.1rem;">@glamorous_showurtalent</span>
+    </a>
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
-<section id="about" style="padding: 4rem 0; max-width: 1000px; margin: 0 auto;">
-  <div class="glass" style="padding: 2.5rem; border-radius: 36px; margin: 0 2rem;" data-aos="fade-up">
-    <div style="text-align: center;">
-      <div class="desi-badge">🇮🇳 Made in India • Made for India 🇮🇳</div>
-      <h2 style="font-size: 2rem; color: #FFFFFF;">India's <span style="color: var(--gold);">Homegrown Social Platform</span></h2>
-      <p style="margin-top: 1.5rem; font-size: 1rem; line-height: 1.6; color: #DDDDDD;">GLAMOROUS — Where India Goes Social. We're building India's digital playground, a platform where every Indian voice matters. From content creation to earning rewards, we empower creators across the nation to turn their passion into profession.</p>
-      <p style="margin-top: 1rem; font-weight: 500; color: var(--gold);">Local, but next-level. Desh ka platform, duniya ka impact.</p>
-    </div>
+<!-- ABOUT & CONTACT -->
+<section id="contact" style="padding: 4rem 0; max-width: 1000px; margin: 0 auto;">
+  <div class="glass" style="padding: 2.5rem; margin: 0 2rem; text-align: center;" data-aos="fade-up">
+    <div class="desi-badge">🇮🇳 Made in India • Made for India 🇮🇳</div>
+    <h2 style="font-size: 2rem;">India's <span style="color: var(--gold);">Homegrown Social Platform</span></h2>
+    <p style="margin-top: 1.5rem; color: #DDDDDD;">GLAMOROUS — Where India Goes Social. From content creation to earning rewards, we empower creators across the nation to turn their passion into profession.</p>
+    <p style="margin-top: 1rem;"><i class="fas fa-phone-alt" style="color: var(--gold);"></i> +91-8957520758 &nbsp;|&nbsp; <i class="fas fa-envelope" style="color: var(--gold);"></i> info@glamorousapp.com</p>
+    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+      <input type="text" placeholder="Your Name" style="padding: 12px 20px; border-radius: 50px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;">
+      <input type="email" placeholder="Email" style="padding: 12px 20px; border-radius: 50px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;">
+      <textarea rows="3" placeholder="Your message" style="padding: 12px 20px; border-radius: 24px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;"></textarea>
+      <button type="submit" class="btn-primary" style="width: fit-content; margin: auto;">Send Message</button>
+    </form>
   </div>
 </section>
 
 <!-- CTA SECTION -->
-<section style="padding: 4rem 2rem;">
-  <div class="cta-section" data-aos="fade-up">
-    <h2>Ready to start your creator journey?</h2>
-    <p style="margin-bottom: 2rem; color: #CCCCCC;">Join 10,000+ creators already earning on GLAMOROUS</p>
+<section style="padding: 2rem 2rem 4rem;">
+  <div class="glass" style="text-align: center; padding: 3rem; max-width: 900px; margin: 0 auto;">
+    <h2 style="font-size: 2rem;">Ready to start your creator journey?</h2>
+    <p style="margin: 1rem 0; color: #CCCCCC;">Join 10,000+ creators already earning on GLAMOROUS</p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="#" class="store-btn" id="ctaPlayStore"><i class="fab fa-google-play store-icon"></i><div class="store-text"><small>GET IT ON</small><strong>Google Play</strong></div></a>
       <a href="#" class="store-btn" id="ctaAppStore"><i class="fab fa-apple store-icon"></i><div class="store-text"><small>Download on the</small><strong>App Store</strong></div></a>
@@ -897,24 +903,8 @@
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" style="padding: 4rem 0;">
-  <div style="max-width: 700px; margin: 0 auto; text-align: center; padding: 0 2rem;">
-    <h2 class="section-title">Get In <span>Touch</span></h2>
-    <div class="glass" style="padding: 2rem;">
-      <p><i class="fas fa-phone-alt" style="color: var(--gold);"></i> +91-8957520758 &nbsp;|&nbsp; <i class="fas fa-envelope" style="color: var(--gold);"></i> info@glamorousapp.com</p>
-      <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-        <input type="text" placeholder="Your Name" style="padding: 12px 20px; border-radius: 50px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;">
-        <input type="email" placeholder="Email" style="padding: 12px 20px; border-radius: 50px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;">
-        <textarea rows="3" placeholder="Your message" style="padding: 12px 20px; border-radius: 24px; background: #111116; border: 1px solid rgba(245,176,66,0.4); color: white;"></textarea>
-        <button type="submit" class="btn-primary" style="width: fit-content; margin: auto;">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
-<footer style="padding: 2rem 5%; border-top: 1px solid rgba(245,176,66,0.2); margin-top: 2rem;">
+<footer style="padding: 2rem 5%; border-top: 1px solid rgba(245,176,66,0.2);">
   <div style="max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
     <div style="color: #AAAAAA;">© 2025 GLAMOROUS — Made with ❤️ in India</div>
     <div><a href="#" style="color: var(--gold); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--gold); text-decoration: none;">Terms of Service</a></div>
@@ -923,14 +913,12 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({ once: true, duration: 800, easing: 'ease-out' });
+  AOS.init({ once: true, duration: 800 });
 
-  // Logo click to home
   document.getElementById('logoHomeLink')?.addEventListener('click', () => {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Video toggle
   const videoEl = document.getElementById('heroVideo');
   const toggleBtn = document.getElementById('toggleVideoBtn');
   let videoState = 1;
@@ -939,17 +927,12 @@
     videoEl.load(); videoEl.play();
   });
 
-  // Mobile menu
   const mobileBtn = document.getElementById('mobileMenuBtn');
   const mobileNav = document.getElementById('mobileNav');
   mobileBtn?.addEventListener('click', () => {
     mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
   });
-  document.querySelectorAll('#mobileNav a').forEach(link => {
-    link.addEventListener('click', () => { mobileNav.style.display = 'none'; });
-  });
 
-  // Download redirects
   const downloadApp = (platform) => {
     const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.glamorous.app';
     const appStoreUrl = 'https://apps.apple.com/in/app/glamorous/id123456789';
@@ -963,24 +946,10 @@
     btn.addEventListener('click', (e) => { e.preventDefault(); downloadApp('ios'); });
   });
 
-  // Contact form
   document.getElementById('contactForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert("📩 Thanks for reaching out! Team GLAMOROUS will connect soon. Jai Hind!");
     e.target.reset();
-  });
-
-  // Active link highlight
-  window.addEventListener('scroll', () => {
-    let current = '';
-    document.querySelectorAll('section[id]').forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
-    });
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
-    });
   });
 </script>
 </body>
